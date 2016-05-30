@@ -22,6 +22,8 @@
 
 @property BOOL isX;
 @property BOOL shouldSave;
+@property (weak, nonatomic) IBOutletCollection(UIButton) NSArray *buttons;
+
 
 @end
 
@@ -29,8 +31,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.isX = false;
-    [self showCurrentPlayer];
+    self.isX = true;
+    self.whichPlayerLabel.text =[NSString stringWithFormat:@"X"];
+    //[self showCurrentPlayer];
 }
 
 
@@ -39,19 +42,28 @@
 // Ensure whichPlayerLabel shows either an X or an O indicating the player who should go next
 
 
--(void)showCurrentPlayer{
-    self.isX = !self.isX;
-    if(self.isX) {
-        self.whichPlayerLabel.text = @"X";
-    } else {
-        self.whichPlayerLabel.text = @"O";
-    }
-}
+//-(void)showCurrentPlayer{
+//    if(self.isX) {
+//        self.whichPlayerLabel.text = @"X";
+//    } else {
+//        self.whichPlayerLabel.text = @"O";
+//    }
+//}
 
 
--(void)onButtonTapped: (UIButton *)sender {
+-(IBAction)onButtonTapped: (UIButton *)sender {
     NSArray *buttons = [[NSArray alloc] initWithObjects: self.buttonOne, self.buttonTwo, self.buttonThree, self.buttonFour, self.buttonFive, self.buttonSix, self.buttonSeven, self.buttonEight, self.buttonNine, nil];
     
+    if (self.whichPlayerLabel.text == [NSString stringWithFormat:@"X"]) {
+        [self.buttonNine setTitle:@"X" forState:UIControlStateNormal];
+        self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
+    } else {
+        self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
+        [self.buttonNine setTitle:@"O" forState:UIControlStateNormal];
+        self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
+
+    }
+    // this assigns the button as X
     
     
 }

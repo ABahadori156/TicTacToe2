@@ -52,6 +52,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfj-ro-MEy">
                                 <rect key="frame" x="470" y="322" width="59" height="30"/>
                                 <state key="normal" title="Button 9"/>
+                                <connections>
+                                    <action selector="onButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qSk-Bt-eZR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59n-7K-my9">
                                 <rect key="frame" x="257" y="28" width="87" height="21"/>
@@ -74,6 +77,15 @@
                         <outlet property="buttonThree" destination="M3b-hB-Njb" id="5UN-FE-hMj"/>
                         <outlet property="buttonTwo" destination="P09-cv-MP1" id="da3-IY-TTa"/>
                         <outlet property="whichPlayerLabel" destination="59n-7K-my9" id="bbS-TQ-n3m"/>
+                        <outletCollection property="buttons" destination="uYU-Vw-SK9" id="gk3-nR-UyL"/>
+                        <outletCollection property="buttons" destination="P09-cv-MP1" id="sPr-tz-k6D"/>
+                        <outletCollection property="buttons" destination="M3b-hB-Njb" id="RPP-2M-iYN"/>
+                        <outletCollection property="buttons" destination="JHU-ZE-5PG" id="Z1I-20-cUe"/>
+                        <outletCollection property="buttons" destination="P2M-5S-N5K" id="Bi1-QW-Lcv"/>
+                        <outletCollection property="buttons" destination="doy-ME-i2x" id="3SW-SI-H9V"/>
+                        <outletCollection property="buttons" destination="hkJ-Kt-RWu" id="7Ld-nX-fZi"/>
+                        <outletCollection property="buttons" destination="QjZ-Ie-3z3" id="HE2-eq-lbA"/>
+                        <outletCollection property="buttons" destination="Vfj-ro-MEy" id="Vnn-fP-nq4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
