@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dIf-F5-q9p">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -16,11 +16,87 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYU-Vw-SK9">
+                                <rect key="frame" x="71" y="129" width="57" height="30"/>
+                                <state key="normal" title="Button 1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P09-cv-MP1">
+                                <rect key="frame" x="271" y="129" width="59" height="30"/>
+                                <state key="normal" title="Button 2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-hB-Njb">
+                                <rect key="frame" x="470" y="129" width="59" height="30"/>
+                                <state key="normal" title="Button 3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHU-ZE-5PG">
+                                <rect key="frame" x="69" y="228" width="60" height="30"/>
+                                <state key="normal" title="Button 4"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2M-5S-N5K">
+                                <rect key="frame" x="271" y="228" width="59" height="30"/>
+                                <state key="normal" title="Button 5"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doy-ME-i2x">
+                                <rect key="frame" x="470" y="228" width="59" height="30"/>
+                                <state key="normal" title="Button 6"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkJ-Kt-RWu">
+                                <rect key="frame" x="70" y="322" width="58" height="30"/>
+                                <state key="normal" title="Button 7"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QjZ-Ie-3z3">
+                                <rect key="frame" x="271" y="322" width="59" height="30"/>
+                                <state key="normal" title="Button 8"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfj-ro-MEy">
+                                <rect key="frame" x="470" y="322" width="59" height="30"/>
+                                <state key="normal" title="Button 9"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59n-7K-my9">
+                                <rect key="frame" x="257" y="28" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="D53-QS-Tca"/>
+                    <connections>
+                        <outlet property="buttonEight" destination="QjZ-Ie-3z3" id="5aO-T7-Svw"/>
+                        <outlet property="buttonFive" destination="P2M-5S-N5K" id="hto-ZY-cb4"/>
+                        <outlet property="buttonFour" destination="JHU-ZE-5PG" id="m47-8t-AGJ"/>
+                        <outlet property="buttonNine" destination="Vfj-ro-MEy" id="fbk-UJ-qnd"/>
+                        <outlet property="buttonOne" destination="uYU-Vw-SK9" id="X51-c2-Way"/>
+                        <outlet property="buttonSeven" destination="hkJ-Kt-RWu" id="yeh-DJ-IGt"/>
+                        <outlet property="buttonSix" destination="doy-ME-i2x" id="sHI-Fw-bQD"/>
+                        <outlet property="buttonThree" destination="M3b-hB-Njb" id="5UN-FE-hMj"/>
+                        <outlet property="buttonTwo" destination="P09-cv-MP1" id="da3-IY-TTa"/>
+                        <outlet property="whichPlayerLabel" destination="59n-7K-my9" id="bbS-TQ-n3m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1044" y="997"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S5Q-zI-Mhu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="dIf-F5-q9p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bas-oX-roM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PaR-zL-0v5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0V-qB-Z1e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="997"/>
         </scene>
     </scenes>
 </document>
