@@ -53,7 +53,23 @@
 
 -(IBAction)onButtonTapped: (UIButton *)sender {
     NSArray *buttons = [[NSArray alloc] initWithObjects: self.buttonOne, self.buttonTwo, self.buttonThree, self.buttonFour, self.buttonFive, self.buttonSix, self.buttonSeven, self.buttonEight, self.buttonNine, nil];
+
     
+        if (self.whichPlayerLabel.text == [NSString stringWithFormat:@"X"]) {
+            [sender setTitle:@"X" forState:UIControlStateNormal];
+            self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
+        } else {
+            self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
+            [sender setTitle:@"O" forState:UIControlStateNormal];
+            self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
+        }
+    
+    
+    
+    
+    
+    
+   /*
     if (self.whichPlayerLabel.text == [NSString stringWithFormat:@"X"]) {
         [self.buttonNine setTitle:@"X" forState:UIControlStateNormal];
         self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
@@ -61,8 +77,10 @@
         self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
         [self.buttonNine setTitle:@"O" forState:UIControlStateNormal];
         self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
-
     }
+   */
+  
+    
     // this assigns the button as X
     
     
