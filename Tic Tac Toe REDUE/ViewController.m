@@ -31,57 +31,42 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.isX = true;
     self.whichPlayerLabel.text =[NSString stringWithFormat:@"X"];
     //[self showCurrentPlayer];
 }
 
 
-// When a button is tapped, change the label to X or O based on whose turn it is
-// Ensure X's are blue and O's are red
-// Ensure whichPlayerLabel shows either an X or an O indicating the player who should go next
-
-
-//-(void)showCurrentPlayer{
-//    if(self.isX) {
-//        self.whichPlayerLabel.text = @"X";
-//    } else {
-//        self.whichPlayerLabel.text = @"O";
-//    }
-//}
-
 
 -(IBAction)onButtonTapped: (UIButton *)sender {
-    NSArray *buttons = [[NSArray alloc] initWithObjects: self.buttonOne, self.buttonTwo, self.buttonThree, self.buttonFour, self.buttonFive, self.buttonSix, self.buttonSeven, self.buttonEight, self.buttonNine, nil];
+//    NSArray *buttons = [[NSArray alloc] initWithObjects: self.buttonOne, self.buttonTwo, self.buttonThree, self.buttonFour, self.buttonFive, self.buttonSix, self.buttonSeven, self.buttonEight, self.buttonNine, nil];
 
+    NSLog(@"button first tapped - first step");
     
         if (self.whichPlayerLabel.text == [NSString stringWithFormat:@"X"]) {
+    
+            // X related actions:
             [sender setTitle:@"X" forState:UIControlStateNormal];
             self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
+            [sender setTintColor:[UIColor redColor]];
+            
+            
+            sender.userInteractionEnabled = NO;
+            
+            
         } else {
-            self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
+            
+            // O related actions:
             [sender setTitle:@"O" forState:UIControlStateNormal];
             self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
+            [sender setTintColor:[UIColor blueColor]];
+            
+            
+            sender.userInteractionEnabled = NO;
         }
     
     
     
-    
-    
-    
-   /*
-    if (self.whichPlayerLabel.text == [NSString stringWithFormat:@"X"]) {
-        [self.buttonNine setTitle:@"X" forState:UIControlStateNormal];
-        self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
-    } else {
-        self.whichPlayerLabel.text = [NSString stringWithFormat:@"O"];
-        [self.buttonNine setTitle:@"O" forState:UIControlStateNormal];
-        self.whichPlayerLabel.text = [NSString stringWithFormat:@"X"];
-    }
-   */
-  
-    
-    // this assigns the button as X
+             
     
     
 }
