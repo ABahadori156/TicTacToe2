@@ -20,20 +20,39 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonNine;
 @property (weak, nonatomic) IBOutlet UILabel *whichPlayerLabel;
 
+@property BOOL isX;
+@property BOOL shouldSave;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.isX = false;
+    [self showCurrentPlayer];
 }
 
 
 // When a button is tapped, change the label to X or O based on whose turn it is
 // Ensure X's are blue and O's are red
 // Ensure whichPlayerLabel shows either an X or an O indicating the player who should go next
+
+
+-(void)showCurrentPlayer{
+    self.isX = !self.isX;
+    if(self.isX) {
+        self.whichPlayerLabel.text = @"X";
+    } else {
+        self.whichPlayerLabel.text = @"O";
+    }
+}
+
+
 -(void)onButtonTapped: (UIButton *)sender {
+    NSArray *buttons = [[NSArray alloc] initWithObjects: self.buttonOne, self.buttonTwo, self.buttonThree, self.buttonFour, self.buttonFive, self.buttonSix, self.buttonSeven, self.buttonEight, self.buttonNine, nil];
+    
+    
     
 }
 
