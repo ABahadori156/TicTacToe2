@@ -94,7 +94,12 @@
     
     if([str1 isEqualToString:str2] && [str2 isEqualToString:str3]){
         NSLog(@" winner: %@", str3 );
-        UIAlertController *winnerAlert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:<#(nonnull NSString *), ...#>]@"Player %@ Wins!", message:<#(nullable NSString *)#> preferredStyle:<#(UIAlertControllerStyle)#>]
+        UIAlertController *winnerAlert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"Winner!"] message:[NSString stringWithFormat:@"Player %@ Wins!", str3 ] preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *okayButton = [UIAlertAction actionWithTitle:@"Play again" style:UIAlertActionStyleDefault handler:nil];
+        
+        [winnerAlert addAction:okayButton];
+        [self presentViewController:winnerAlert animated:YES completion:nil];
     }
     
     if([str4 isEqualToString:str5] && [str5 isEqualToString:str6]){
